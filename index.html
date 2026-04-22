@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EOD模式 · 智能问答助手</title>
+  <style>
+    /* 你的原有样式全部保留 */
+    body { ... }
+    .chat-container { ... }
+  </style>
+</head>
+<body>
+  <!-- ============================================= -->
+  <!-- 你原有的所有页面内容全部保留，不用动！         -->
+  <!-- ============================================= -->
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>🌿 EOD模式 · 专家问答</h2>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <!-- 原有对话内容 -->
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="user-input" placeholder="输入您的问题..." />
+      <button id="send-button">发送</button>
+    </div>
+  </div>
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7630485497634177065',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_********'
+      }
+    }
+  });
+</script>
+  <!-- ============================================= -->
+  <!-- SDK 代码插入到这里（</body> 标签的前面）       -->
+  <!-- ============================================= -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7630485497634177065',
+        token: 'pat_0xB2lCH7nJ7CQAZECrHn7IjiCAQVc1tS8Res7hrpYPkALP1mS7Kyk9vtEALGLoJJ',
+      },
+      componentProps: {
+        title: 'EOD模式专家问答',
+        layout: 'pc',
+        width: 460
+      },
+    });
+  </script>
+</body>
+</html>
